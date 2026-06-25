@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("imagenes/doom-eternal-4k-j3eodjac3otl2223.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: bisque;
+}
+
+
+.navbar {
+  background-color: rgb(0, 0, 0) !important;
+  border-bottom: 2px solid #ff0000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  color: #ff0000 !important;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  color: #ddd !important;
+  transition: color 0.2s;
+  
+}
+
+.nav-link:hover {
+  color: #ff0000 !important;
+}
+
+/* ===== CAJA PRINCIPAL ===== */
+.caja {
+  background-color: rgba(0, 0, 0, 0.80);
+  border: 2px solid rgba(200, 30, 0, 0.6);
+  border-radius: 6px;
+  padding: 30px;
+  margin: 50px auto;
+  max-width: 1000px;
+  color: bisque;
+}
+
+.caja h1, .caja h2, .caja h3 {
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+
+.contenedor-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  width: 100%;
+  min-height: 400px;
+}
+
+.imagen-eset-wrap {
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+.imagen-eset-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.info-eset {
+  flex: 1 1 50%;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: rgba(15, 15, 15, 0.938);
+  padding: 50px 40px;
+  border-left: 3px solid #ff0000;
+  text-align: center;
+}
+
+.info-eset h1 {
+  font-size: 1.6rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.info-eset h2, .info-eset h3 {
+  color: bisque;
+  font-size: 1.1rem;
+}
+
+.info-eset a {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+.info-eset a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .contenedor-index {
+    flex-direction: column;
+  }
+
+  .imagen-eset-wrap,
+  .info-eset {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}
+
+.logo-escuela {
+  width: 270px;
+  height: 270px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.doom-logo-section {
+  text-align: center;
+  padding: 0px 20px;
+  background-color: rgba(0,0,0);
+  position: sticky;        
+  top: 56px;               
+  z-index: 999;         
+}
+
+.doom-logo-section img {
+  width: 160px;
+  height: 120px;
+  object-fit: contain;
+}
+
+/* ===== INTRO TEXT ===== */
+.intro-texto {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.intro-texto p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: bisque;
+}
+
+/* ===== TABLA ===== */
+.tabla-wrap {
+  overflow-x: auto;
+  border-radius: 6px;
+  border: 1px solid rgba(200, 30, 0, 0.4);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #eee;
+  background-color: #1a1a1a;
+}
+
+thead {
+  background-color: rgba(180, 20, 0, 0.7);
+}
+
+th {
+  color: #fff;
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+tr:hover td {
+  background-color: rgba(200, 50, 0, 0.15);
+}
+
+/* ===== VIABLE PAGE ===== */
+.viable-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.viable-card {
+  background-color: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(200, 30, 0, 0.5);
+  border-radius: 6px;
+  padding: 28px 24px;
+  transition: border-color 0.2s;
+}
+
+.viable-card:hover {
+  border-color: #ff0000;
+}
+
+.viable-card h3 {
+  color: #ff0000;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
+
+.viable-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.badge-viable {
+  display: inline-block;
+  background-color: rgba(200, 30, 0, 0.8);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.conclusion {
+  margin-top: 40px;
+  padding: 24px;
+  border-left: 4px solid #ff0000;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0 6px 6px 0;
+}
+
+.conclusion p {
+  color: bisque;
+  font-size: 1rem;
+  line-height: 1.8;
+}
